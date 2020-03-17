@@ -1,12 +1,12 @@
 import time
 
-from queues import Queue, hot_potato
+from deques import is_palindrome
+from queues import Queue
 from stacks import *
 
 
 def main():
-    print(hot_potato(['Adam', 'Brian', 'Allan', 'Adongo', 'Allison', 'Arisi'], 42))
-    # queue_test()
+    print(is_palindrome("100001"))
 
 
 def queue_test():
