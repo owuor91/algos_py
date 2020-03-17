@@ -1,7 +1,11 @@
 import time
 
+from stacks import *
+
+
 def main():
-    stackify()
+    print(convert_to_base(144758259826592865, 16))
+
 
 def stackify():
     names_stack = Stack()
@@ -28,26 +32,6 @@ def is_anagram(str, str2):
     if sorted(str) == sorted(str2):
         return True
     return False
-
-class Stack:
-    def __init__(self):
-        self.items=[]
-
-    def is_empty(self):
-        return self.size()==0
-
-    def pop(self):
-        return self.items.pop()
-        #self.items[0:len(self.items)-2]
-
-    def push(self, item):
-        self.items.append(item)
-
-    def size(self):
-        return len(self.items)
-
-    def peek(self):
-        return self.items[-1]
 
 if __name__=='__main__':
     main()
