@@ -1,10 +1,27 @@
 import time
 
+from queues import Queue, hot_potato
 from stacks import *
 
 
 def main():
-    print(convert_to_base(144758259826592865, 16))
+    print(hot_potato(['Adam', 'Brian', 'Allan', 'Adongo', 'Allison', 'Arisi'], 42))
+    # queue_test()
+
+
+def queue_test():
+    bank_queue = Queue()
+    print(bank_queue.is_empty())
+    bank_queue.enqueue("Aleya")
+    bank_queue.enqueue("Kassam")
+    bank_queue.enqueue("Almasi")
+    bank_queue.enqueue("Kibet")
+    print(bank_queue.is_empty())
+    print(bank_queue.size())
+    bank_queue.dequeue()
+    bank_queue.dequeue()
+    print(bank_queue.size())
+    print(bank_queue.items)
 
 
 def stackify():
