@@ -1,12 +1,38 @@
 import time
 
-from deques import is_palindrome
+from deques import Deque
+from lists import *
 from queues import Queue
 from stacks import *
 
 
 def main():
-    print(is_palindrome("100001"))
+    u_list = UnorderedList()
+    u_list.add(32)
+    u_list.add(45)
+    u_list.add(34)
+    u_list.add(56)
+    u_list.add(72)
+    print(u_list.size())
+    print(u_list.search(32))
+    u_list.remove(32)
+    print(u_list.search(32))
+    print(u_list.size())
+
+
+def deque_test():
+    guys_deque = Deque()
+    guys_deque.add_front("Juma")
+    guys_deque.add_front("Allan")
+    guys_deque.add_rear("Degue")
+    guys_deque.add_rear("Otis")
+    guys_deque.add_front("Wafule")
+
+    print(guys_deque.items)
+    guys_deque.remove_rear()
+    print(guys_deque.items)
+    guys_deque.remove_front()
+    print(guys_deque.items)
 
 
 def queue_test():
