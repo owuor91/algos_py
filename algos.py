@@ -13,11 +13,10 @@ def main():
     u_list.add(34)
     u_list.add(56)
     u_list.add(72)
-    print(u_list.size())
-    print(u_list.search(32))
-    u_list.remove(32)
-    print(u_list.search(32))
-    print(u_list.size())
+
+    u_list.insert(6, 1007)
+
+    u_list.print_all()
 
 
 def deque_test():

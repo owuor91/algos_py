@@ -46,10 +46,30 @@ class UnorderedList(object):
             previous_node.next = current_node.next
 
     def append(self, item):
-        pass
+        current_node = self.head
+        while True:
+            if current_node.next is not None:
+                break
+            current_node = current_node.next
+
+        current_node.next = Node(item)
 
     def insert(self, position, item):
-        pass
+        index = 0
+        current = self.head
+        previous = None
+        while True:
+            if index == position:
+                break
+            previous, current = current, current.next
+            index += 1
+
+        if previous == None:
+            self.add(item)
+        else:
+            new_node = Node(item)
+            previous.next = new_node
+            new_node.next = current
 
     def index(self, item):
         pass
@@ -59,3 +79,12 @@ class UnorderedList(object):
 
     def pop(self, position):
         pass
+
+    def print_all(self):
+        current_node = self.head
+        while True:
+            if current_node.next == None:
+                print(current_node.value)
+                break
+            print(current_node.value)
+            current_node = current_node.next
