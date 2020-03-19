@@ -1,12 +1,35 @@
 import time
 
 from deques import Deque
-from lists import *
+from ordered_list import OrderedList
 from queues import Queue
 from stacks import *
+from unordered_lists import *
 
 
 def main():
+    ordered_list_test()
+
+
+def ordered_list_test():
+    o_list = OrderedList()
+
+    o_list.add(23)
+    o_list.add(10)
+    o_list.add(38)
+    o_list.add(17)
+    o_list.add(40)
+    o_list.add(32)
+    o_list.add(22)
+    o_list.add(1000)
+    o_list.add(765)
+    o_list.add(67)
+
+    o_list.popItem(7)
+    o_list.print_all()
+
+
+def u_list_test():
     u_list = UnorderedList()
     u_list.add(32)
     u_list.add(45)
