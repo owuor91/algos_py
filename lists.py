@@ -48,7 +48,7 @@ class UnorderedList(object):
     def append(self, item):
         current_node = self.head
         while True:
-            if current_node.next is not None:
+            if current_node.next == None:
                 break
             current_node = current_node.next
 
@@ -72,13 +72,47 @@ class UnorderedList(object):
             new_node.next = current
 
     def index(self, item):
-        pass
+        current = self.head
+        index = 0
+        while True:
+            if current.value == item:
+                break
+            index += 1
+
+            if current.next is not None:
+                current = current.next
+            else:
+                raise Exception(f"{item} not found in list")
+
+        return index
 
     def pop(self):
-        pass
+        current = self.head
+        previous = None
+        while True:
+            if current.next == None:
+                break
+            previous, current = current, current.next
 
-    def pop(self, position):
-        pass
+        if previous == None:
+            self.head = None
+        else:
+            previous.next = None
+        return current
+
+    def popItem(self, position):
+        current = self.head
+        index = 0
+        previous = None
+
+        while True:
+            if index == position:
+                break
+            previous, current = current, current.next
+            index += 1
+
+        previous.next = current.next
+        return current
 
     def print_all(self):
         current_node = self.head

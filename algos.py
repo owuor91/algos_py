@@ -14,8 +14,11 @@ def main():
     u_list.add(56)
     u_list.add(72)
 
-    u_list.insert(6, 1007)
+    u_list.append(1050)
 
+    u_list.append(88)
+
+    u_list.popItem(4)
     u_list.print_all()
 
 
