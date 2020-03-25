@@ -3,12 +3,25 @@ import time
 from deques import Deque
 from ordered_list import OrderedList
 from queues import Queue
+from searching import *
 from stacks import *
 from unordered_lists import *
 
 
 def main():
-    ordered_list_test()
+    print(binary_search(7, [2, 4, 5, 6, 7, 8, 9, 11, 13]))
+
+
+def odd_sum(n):
+    i = 1
+    current = 1
+    sum = 0
+
+    while i <= n:
+        sum += current
+        current += 2
+        i += 1
+    print(sum)
 
 
 def ordered_list_test():
@@ -86,13 +99,15 @@ def stackify():
     names_stack.pop()
     print(names_stack.size())
 
+
 def sum_of_first_n_digits(n):
     start = time.time()
     sum = n * (n + 1) // 2
     end = time.time()
-    time_taken  = end -start
+    time_taken = end - start
     print(time_taken)
     return sum
+
 
 def is_anagram(str, str2):
     print(sorted(str))
@@ -101,5 +116,6 @@ def is_anagram(str, str2):
         return True
     return False
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     main()
