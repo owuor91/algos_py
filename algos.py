@@ -3,14 +3,21 @@ import time
 from deques import Deque
 from ordered_list import OrderedList
 from queues import Queue
-from searching import *
 from stacks import *
+from tree_traversal import *
 from unordered_lists import *
 
 
 def main():
-    print(binary_search(7, [2, 4, 5, 6, 7, 8, 9, 11, 13]))
+    tree = create_tree()
+    preorder(tree)
 
+
+def list_sum(list):
+    if len(list) == 0:
+        return 0
+    else:
+        return list[0] + list_sum(list[1:])
 
 def odd_sum(n):
     i = 1
