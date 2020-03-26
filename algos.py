@@ -10,7 +10,7 @@ from unordered_lists import *
 
 def main():
     tree = create_tree()
-    preorder(tree)
+    inorder(tree)
 
 
 def list_sum(list):
