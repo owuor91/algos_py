@@ -11,11 +11,12 @@ from searching import *
 from hashtable import *
 from sorting.bubble_sort import *
 from sorting.selection_sort import *
+from sorting.insertion_sort import insertion_sort
 
 
 def main():
     list = [3,1,76,34,678,23,32,657,43,1]
-    selection_sort(list)
+    insertion_sort(list)
     print(list)
 
 
