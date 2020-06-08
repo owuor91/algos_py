@@ -9,9 +9,16 @@ from unordered_lists import *
 from big_o import find_min, is_anagram2
 from searching import *
 from hashtable import *
+from sorting.bubble_sort import *
 
 
 def main():
+    list = [3,1,76,34,678,23,32,657,43,1]
+    bubble_sort(list)
+    print(list)
+
+
+def hashing():
     animals = HashTable()
     animals[54] = "cat"
     animals[26] = "dog"
@@ -21,9 +28,8 @@ def main():
     animals[31] = "cow"
     animals[44] = "goat"
     animals[55] = "pig"
-    #animals[20] = "chicken"
+    # animals[20] = "chicken"
     print(animals.slots)
-
 
 def list_sum(list):
     if len(list) == 0:
