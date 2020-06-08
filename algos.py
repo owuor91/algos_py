@@ -10,11 +10,12 @@ from big_o import find_min, is_anagram2
 from searching import *
 from hashtable import *
 from sorting.bubble_sort import *
+from sorting.selection_sort import *
 
 
 def main():
     list = [3,1,76,34,678,23,32,657,43,1]
-    bubble_sort(list)
+    selection_sort(list)
     print(list)
 
 
