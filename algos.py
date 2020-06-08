@@ -6,11 +6,23 @@ from queues import Queue
 from stacks import *
 from tree_traversal import *
 from unordered_lists import *
+from big_o import find_min, is_anagram2
+from searching import *
+from hashtable import *
 
 
 def main():
-    tree = create_tree()
-    preorder(tree)
+    animals = HashTable()
+    animals[54] = "cat"
+    animals[26] = "dog"
+    animals[93] = "lion"
+    animals[17] = "tiger"
+    animals[77] = "bird"
+    animals[31] = "cow"
+    animals[44] = "goat"
+    animals[55] = "pig"
+    #animals[20] = "chicken"
+    print(animals.slots)
 
 
 def list_sum(list):
@@ -18,6 +30,7 @@ def list_sum(list):
         return 0
     else:
         return list[0] + list_sum(list[1:])
+
 
 def odd_sum(n):
     i = 1
@@ -122,6 +135,16 @@ def is_anagram(str, str2):
     if sorted(str) == sorted(str2):
         return True
     return False
+
+
+def bainari_sach(list, item):
+    midpoint = len(list) // 2
+    if list[midpoint] == item:
+        return True
+
+    if list[midpoint] < item:
+        return bainari_sach(list[midpoint + 1:], item)
+    return bainari_sach(list[:midpoint], item)
 
 
 if __name__ == '__main__':
