@@ -5,8 +5,7 @@ from lists.ordered_list import OrderedList
 from lists.queues import Queue
 from lists.stacks import *
 from lists.unordered_lists import *
-from hashtable import *
-from sorting.merge_sort import merge_sort
+from searching.hashtable import *
 from  trees.BinarySearchTree import *
 
 
