@@ -7,13 +7,19 @@ from lists.stacks import *
 from lists.unordered_lists import *
 from hashtable import *
 from sorting.merge_sort import merge_sort
+from  trees.BinarySearchTree import *
 
 
 def main():
     list = [3,1,76,34,678,23,32,657,43,1]
-    merge_sort(list)
-    print(list)
+    bst()
 
+def bst():
+    bst = BinarySearchTree()
+    bst.__setitem__(29, "Omondi")
+    bst.__setitem__(14, "Allaw")
+    bst.__setitem__(58, "Ouru")
+    print(bst.__getitem__(14))
 
 def hashing():
     animals = HashTable()
