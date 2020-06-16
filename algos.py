@@ -1,17 +1,31 @@
 import time
 
+from graphs import breadth_first_search
 from lists.deques import Deque
 from lists.ordered_list import OrderedList
 from lists.queues import Queue
 from lists.stacks import *
 from lists.unordered_lists import *
 from searching.hashtable import *
-from  trees.BinarySearchTree import *
+from trees.BinarySearchTree import *
 
 
 def main():
-    list = [3,1,76,34,678,23,32,657,43,1]
-    bst()
+    graph = {
+        'A': ['B', 'C'],
+        'B': ['D', 'E'],
+        'C': ['F'],
+        'D': [],
+        'E': ['F'],
+        'F': []
+    }
+
+    # visited = set()
+    # depth_first_search.dfs(graph, visited, 'A')
+    visited = []
+    queue = []
+    breadth_first_search.bfs(graph, visited, 'A')
+
 
 def bst():
     bst = BinarySearchTree()
@@ -19,6 +33,7 @@ def bst():
     bst.__setitem__(14, "Allaw")
     bst.__setitem__(58, "Ouru")
     print(bst.__getitem__(14))
+
 
 def hashing():
     animals = HashTable()
