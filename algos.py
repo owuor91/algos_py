@@ -1,24 +1,24 @@
 import time
 
-from deques import Deque
-from ordered_list import OrderedList
-from queues import Queue
-from stacks import *
-from tree_traversal import *
-from unordered_lists import *
-from big_o import find_min, is_anagram2
-from searching import *
-from hashtable import *
-from sorting.bubble_sort import *
-from sorting.selection_sort import *
-from sorting.insertion_sort import insertion_sort
+from lists.deques import Deque
+from lists.ordered_list import OrderedList
+from lists.queues import Queue
+from lists.stacks import *
+from lists.unordered_lists import *
+from searching.hashtable import *
+from  trees.BinarySearchTree import *
 
 
 def main():
     list = [3,1,76,34,678,23,32,657,43,1]
-    insertion_sort(list)
-    print(list)
+    bst()
 
+def bst():
+    bst = BinarySearchTree()
+    bst.__setitem__(29, "Omondi")
+    bst.__setitem__(14, "Allaw")
+    bst.__setitem__(58, "Ouru")
+    print(bst.__getitem__(14))
 
 def hashing():
     animals = HashTable()
