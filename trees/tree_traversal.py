@@ -20,12 +20,16 @@ def inorder(node):
 
 
 def create_tree():
-    tree = {'val': 'Aloo 1',
+    tree = {'val': 'Nyanya',
             'left': {
-                'val': 'Achieng 2'
+                'val': 'Edwina',
+                'left': {'val': 'Ben'},
+                'right': {'val': 'Mike'}
             },
             'right': {
-                'val': 'Atieno 3'
+                'val': 'Calisto',
+                'left': {'val': 'Omondi'},
+                'right': {'val': 'Winnie'}
             }
             }
     return tree
