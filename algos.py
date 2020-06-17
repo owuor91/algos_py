@@ -8,23 +8,11 @@ from lists.stacks import *
 from lists.unordered_lists import *
 from searching.hashtable import *
 from trees.BinarySearchTree import *
+from sorting.quick_sort import quick_sort
 
 
 def main():
-    graph = {
-        'A': ['B', 'C'],
-        'B': ['D', 'E'],
-        'C': ['F'],
-        'D': [],
-        'E': ['F'],
-        'F': []
-    }
-
-    # visited = set()
-    # depth_first_search.dfs(graph, visited, 'A')
-    visited = []
-    queue = []
-    breadth_first_search.bfs(graph, visited, 'A')
+    print(quick_sort([12, 54, 6, 32, 78, 4, 23, 1, 76, 8, 0, 43]))
 
 
 def bst():
