@@ -14,3 +14,5 @@ def quick_sort(a_list):
             lower_list.append(item)
 
     return quick_sort(lower_list) + [pivot] + quick_sort(higher_list)
+
+print(quick_sort([12, 54, 6, 32, 78, 4, 23, 1, 76, 8, 0, 43]))
