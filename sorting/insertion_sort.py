@@ -1,7 +1,12 @@
-def insertion_sort(list):
-    for i in range(1, len(list)):
-        current_value, position = list[i], i
+def insertion_sort(list_x):
+    sorted_list = []
+    for item in list_x:
+        sorted_list.append(item)
+        item_index = len(sorted_list) - 1
+        while item_index > 0 and sorted_list[item_index - 1] > sorted_list[item_index]:
+            sorted_list[item_index - 1], sorted_list[item_index] = sorted_list[item_index], sorted_list[item_index - 1]
+            item_index -= 1
+    return sorted_list
 
-        while position > 0 and list[position - 1] > current_value:
-            list[position], position = list[position - 1], position - 1
-        list[position] = current_value
+
+print(insertion_sort([33, 2, 21, 45, 67, 2, 34, 87, 54, 3, 12, 6, 9]))
