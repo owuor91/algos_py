@@ -1,9 +1,10 @@
-def selection_sort(list):
-    for i in range(len(list)):
-        min_position = i
-        for j in range(i+1, len(list)):
-            if list[min_position] > list[j]:
-                min_position = j
+def selection_sort(x_list):
+    for i in range(0, len(x_list) - 1):
+        minimum = i
+        for j in range(i + 1, len(x_list)):
+            if x_list[j] < x_list[minimum]:
+                x_list[i], x_list[j] = x_list[j], x_list[i]
+    return x_list
 
-        list[min_position], list[i] = list[i], list[min_position]
-    return list
+
+print(selection_sort([32, 43, 12, 8, 4, 32, 8, 1, 654, 23]))
