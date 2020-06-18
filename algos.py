@@ -8,12 +8,11 @@ from lists.stacks import *
 from lists.unordered_lists import *
 from searching.hashtable import *
 from trees.BinarySearchTree import *
-from sorting.quick_sort import quick_sort
-from sorting.insertion_sort import insertion_sort
+from sorting.merge_sort import merge_sort
 
 
 def main():
-    print(insertion_sort([12, 54, 6, 32, 78, 4, 23, 1, 76, 8, 0, 43]))
+    print(merge_sort([12, 54, 6, 32, 78, 4, 23, 1, 76, 8, 0, 43]))
 
 
 def bst():

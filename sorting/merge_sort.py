@@ -1,16 +1,36 @@
 def merge_sort(list):
-    if len(list) > 1:
-        mid = len(list) // 2
-        left_half = list[:mid]
-        right_half = list[mid:]
+    if len(list) < 2:
+        return list
 
-        merge_sort(left_half)
-        merge_sort(right_half)
+    midpoint = len(list) // 2
 
-        i, j, k = 0, 0, 0
-        while i < len(left_half) and j < len(right_half):
-           if left_half[i] <= right_half[j]:
-               list[k] = left_half[i]
-               i = i+1
-           else:
-               list[k] = right_half[j]
+    return merge(merge_sort(list[:midpoint]), merge_sort(list[midpoint:]))
+
+
+def merge(left_list, right_list):
+    if len(left_list) == 0:
+        return right_list
+    if len(right_list) == 0:
+        return left_list
+
+    result = []
+    index_left = index_right = 0
+
+    while len(result) <= len(left_list) + len(right_list):
+        if left_list[index_left] <= right_list[index_right]:
+            result.append(left_list[index_left])
+            index_left += 1
+        else:
+            result.append(right_list[index_right])
+            index_right += 1
+
+        if index_left == len(left_list):
+            result += (right_list)
+            break
+        if index_right == len(right_list):
+            result += (left_list)
+            break
+
+    return result
+
+# print(merge_sort([31,56,3,21,45,32,76,8756,43,23,5,6,788,8]))
